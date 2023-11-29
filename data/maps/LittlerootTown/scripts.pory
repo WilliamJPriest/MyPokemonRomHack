@@ -1,4 +1,4 @@
-.set LOCALID_TWIN, 1
+raw `.set LOCALID_TWIN, 1
 .set LOCALID_MOM, 4
 .set LOCALID_RIVAL, 7
 .set LOCALID_BIRCH, 8
@@ -1019,12 +1019,11 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I have something to show you.\n"
 	.string "Let's go to my LAB.$"
 
-LittlerootTown_EventScript_NewSign::
-	lockall
-	msgbox LittlerootTown_EventScript_NewSign_Text_0
-	releaseall
-	return
+`
 
-
-LittlerootTown_EventScript_NewSign_Text_0:
-	.string "Watch Out For Gay Clowns$"
+script LittlerootTown_EventScript_NewSign{
+    lockall
+    msgbox("Watch Out For Gay Clowns")
+    releaseall
+}
+    
