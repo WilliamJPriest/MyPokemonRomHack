@@ -23,6 +23,29 @@
 
   ],
   "bg_events": [
-
+    {
+      "type": "hidden_item",
+      "x": 8,
+      "y": 15,
+      "elevation": 0,
+      "item": "ITEM_NONE",
+      "flag": "FLAG_TEMP_SKIP_GABBY_INTERVIEW"
+    },
+    {
+      "type": "hidden_item",
+      "x": 13,
+      "y": 24,
+      "elevation": 0,
+      "item": "ITEM_NONE",
+      "flag": "FLAG_TEMP_SKIP_GABBY_INTERVIEW"
+    },
+    {
+      "type": "hidden_item",
+      "x": 32,
+      "y": 40,
+      "elevation": 0,
+      "item": "ITEM_NONE",
+      "flag": "FLAG_TEMP_SKIP_GABBY_INTERVIEW"
+    }
   ]
 }

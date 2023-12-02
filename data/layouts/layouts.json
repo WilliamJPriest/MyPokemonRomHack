@@ -4414,8 +4414,8 @@
     {
       "id": "LAYOUT_CENTER_CITY",
       "name": "CenterCity_Layout",
-      "width": 46,
-      "height": 56,
+      "width": 72,
+      "height": 72,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/CenterCity/border.bin",
