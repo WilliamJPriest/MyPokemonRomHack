@@ -1851,7 +1851,6 @@ static const u8 sWeatherNames[22][24] = {
     [WEATHER_FOG_DIAGONAL]       = _("FOG DIAGONAL"),
     [WEATHER_UNDERWATER]         = _("UNDERWATER"),
     [WEATHER_SHADE]              = _("SHADE"),
-    [WEATHER_SHADE2]             = _("SHADE2"),
     [WEATHER_DROUGHT]            = _("DROUGHT"),
     [WEATHER_DOWNPOUR]           = _("DOWNPOUR"),
     [WEATHER_UNDERWATER_BUBBLES] = _("UNDERWATER BUBBLES"),
