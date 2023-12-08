@@ -1,9 +1,6 @@
 ProfLab_MapScripts::
 	.byte 0
 
-ProfLab_MapScripts::
-	.byte 0
-
 
 ProfLab_EventScript_Pokeball::
 	lockall
