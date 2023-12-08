@@ -4425,11 +4425,31 @@
       "id": "LAYOUT_NEW_MAP1",
       "name": "NewMap1_Layout",
       "width": 32,
-      "height": 32,
+      "height": 42,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/NewMap1/border.bin",
       "blockdata_filepath": "data/layouts/NewMap1/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_ROUTE1",
+      "name": "NewRoute1_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/NewRoute1/border.bin",
+      "blockdata_filepath": "data/layouts/NewRoute1/map.bin"
+    },
+    {
+      "id": "LAYOUT_PROF_LAB",
+      "name": "ProfLab_Layout",
+      "width": 13,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/ProfLab/border.bin",
+      "blockdata_filepath": "data/layouts/ProfLab/map.bin"
     }
   ]
 }

@@ -1063,3 +1063,7 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/CenterCity/scripts.inc"
 
 	.include "data/maps/NewMap1/scripts.inc"
+
+	.include "data/maps/NewRoute1/scripts.inc"
+
+	.include "data/maps/ProfLab/scripts.inc"
