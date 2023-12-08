@@ -4450,6 +4450,26 @@
       "secondary_tileset": "gTileset_Lab",
       "border_filepath": "data/layouts/ProfLab/border.bin",
       "blockdata_filepath": "data/layouts/ProfLab/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_MAP2",
+      "name": "NewMap2_Layout",
+      "width": 13,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_InsideShip",
+      "border_filepath": "data/layouts/NewMap2/border.bin",
+      "blockdata_filepath": "data/layouts/NewMap2/map.bin"
+    },
+    {
+      "id": "LAYOUT_BOAT_RIDE",
+      "name": "BoatRide_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/BoatRide/border.bin",
+      "blockdata_filepath": "data/layouts/BoatRide/map.bin"
     }
   ]
 }

@@ -67,6 +67,7 @@
 #define MAP_NEW_MAP1            (58 | (0 << 8))
 #define MAP_NEW_ROUTE1          (59 | (0 << 8))
 #define MAP_PROF_LAB            (60 | (0 << 8))
+#define MAP_BOAT_RIDE           (61 | (0 << 8))
 
 // gMapGroup_IndoorLittleroot
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F    (0 | (1 << 8))
@@ -119,6 +120,7 @@
 #define MAP_VERDANTURF_TOWN_WANDAS_HOUSE            (6 | (6 << 8))
 #define MAP_VERDANTURF_TOWN_FRIENDSHIP_RATERS_HOUSE (7 | (6 << 8))
 #define MAP_VERDANTURF_TOWN_HOUSE                   (8 | (6 << 8))
+#define MAP_NEW_MAP2                                (9 | (6 << 8))
 
 // gMapGroup_IndoorPacifidlog
 #define MAP_PACIFIDLOG_TOWN_POKEMON_CENTER_1F (0 | (7 << 8))
