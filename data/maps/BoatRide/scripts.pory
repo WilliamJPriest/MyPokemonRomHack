@@ -2,35 +2,31 @@ script ProfLab_EventScript_Pokeball{
  
     lockall
     msgbox("My mom got me a slowpoke")
-    if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_SLOWPOKE_GALARIAN, 5, ITEM_ORAN_BERRY)
-        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
-            playfanfare(MUS_OBTAIN_ITEM)
-            msgbox("Recieved Slowpoke")
-            removeobject(1)
-            setflag(SET_CUSTOM_STARTER_0x020)
-            setflag(FLAG_SYS_POKEMON_GET)
-            call(NicknamePartyMon)
-        }
-        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
-            playfanfare(MUS_OBTAIN_ITEM)
-            msgbox("Recieved Slowpoke")
-            removeobject(1)
-            setflag(SET_CUSTOM_STARTER_0x020)
-            setflag(FLAG_SYS_POKEMON_GET)
-            call(NicknameBoxMon)
-        }
-        else{
-            hidemonpic
-            msgbox("No More Room")
-        }
+    givemon(SPECIES_SLOWPOKE_GALARIAN, 5, ITEM_ORAN_BERRY)
+    if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+        playfanfare(MUS_OBTAIN_ITEM)
+        msgbox("Recieved Slowpoke")
+        removeobject(1)
+        setflag(SET_CUSTOM_STARTER_0x020)
+        setflag(FLAG_SYS_POKEMON_GET)
+        call(NicknamePartyMon)
+    }
+    elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+        playfanfare(MUS_OBTAIN_ITEM)
+        msgbox("Recieved Slowpoke")
+        removeobject(1)
+        setflag(SET_CUSTOM_STARTER_0x020)
+        setflag(FLAG_SYS_POKEMON_GET)
+        call(NicknameBoxMon)
     }
     else{
-        msgbox(ProfLab_NotChosen)
+        hidemonpic
+        msgbox("No More Room")
     }
     msgbox("Where is she?")
     msgbox("I should thank her")
     waitmessage
+    call(PirateBattle)
     releaseall
     end
  
@@ -54,4 +50,14 @@ script NicknameBoxMon{
     }
     call(Common_EventScript_TransferredToPC)
  
+}
+script PirateBattle{
+    if(!flag(SET_CUSTOM_STARTER_0x020)){
+        setflag(SET_PIRATE_BATTLE_0x021)
+        msgbox("Hey Kid")
+
+    }else{
+        clearflag(SET_PIRATE_BATTLE_0x021)
+        
+    }
 }
