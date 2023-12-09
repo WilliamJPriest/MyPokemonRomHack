@@ -4464,10 +4464,10 @@
     {
       "id": "LAYOUT_BOAT_RIDE",
       "name": "BoatRide_Layout",
-      "width": 20,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "width": 15,
+      "height": 15,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_InsideShip",
       "border_filepath": "data/layouts/BoatRide/border.bin",
       "blockdata_filepath": "data/layouts/BoatRide/map.bin"
     }
