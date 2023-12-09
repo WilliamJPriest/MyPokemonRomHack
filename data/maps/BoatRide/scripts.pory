@@ -3,7 +3,7 @@ script ProfLab_EventScript_Pokeball{
     lockall
     msgbox("My mom got me a slowpoke")
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_SLOWPOKE_GALARIAN, 6, ITEM_ORAN_BERRY)
+        givemon(SPECIES_SLOWPOKE_GALARIAN, 5, ITEM_ORAN_BERRY)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Recieved Slowpoke")
@@ -48,7 +48,6 @@ script NicknamePartyMon{
 }
  
 script NicknameBoxMon{
- 
     msgbox("Give it a nickname?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
         call(Common_EventScript_NameReceivedBoxMon)
