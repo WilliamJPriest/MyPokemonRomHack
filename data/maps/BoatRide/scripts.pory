@@ -54,7 +54,7 @@ script NicknameBoxMon{
 script PirateBattle{
     if(!flag(SET_CUSTOM_STARTER_0x020)){
         setflag(SET_PIRATE_BATTLE_0x021)
-        msgbox("Hey Kid")
+        trainerBattle_single()
 
     }else{
         clearflag(SET_PIRATE_BATTLE_0x021)

@@ -6697,10 +6697,10 @@ static const struct TrainerMon sParty_Isaac1[] = {
     }
 };
 
-static const struct TrainerMon sParty_Davis[] = {
+static const struct TrainerMon sParty_Grunt_Davis[] = {
     {
-    .lvl = 27,
-    .species = SPECIES_PINSIR,
+    .lvl = 3,
+    .species = SPECIES_ZUBAT,
     }
 };
 
