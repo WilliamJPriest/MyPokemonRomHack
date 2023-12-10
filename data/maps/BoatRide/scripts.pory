@@ -54,10 +54,25 @@ script NicknameBoxMon{
 script PirateBattle{
     if(!flag(SET_CUSTOM_STARTER_0x020)){
         setflag(SET_PIRATE_BATTLE_0x021)
-        trainerBattle_single()
+        trainerBattle_single(TRAINER_GRUNT_DAVIS,pirate_intro,pirate_battle)
+        msgbox(pirate_lose, MSGBOX_AUTOCLOSE)
+        waitmessage
+        end
 
     }else{
         clearflag(SET_PIRATE_BATTLE_0x021)
         
     }
+}
+
+text pirate_intro{
+    "Hey Kid"
+}
+
+text pirate_battle{
+    "You'll never win"
+}
+
+text pirate_lose{
+    "What!?"
 }

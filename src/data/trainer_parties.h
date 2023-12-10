@@ -6699,8 +6699,9 @@ static const struct TrainerMon sParty_Isaac1[] = {
 
 static const struct TrainerMon sParty_Grunt_Davis[] = {
     {
-    .lvl = 3,
+    .lvl = 2,
     .species = SPECIES_ZUBAT,
+    .moves = {MOVE_LEECH_LIFE}
     }
 };
 
