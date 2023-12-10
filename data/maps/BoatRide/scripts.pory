@@ -1,4 +1,6 @@
-script ProfLab_EventScript_Pokeball{
+mapscripts BoatRide_MapScripts {}
+
+script BoatRide_EventScript_Pokeball{
  
     lockall
     msgbox("My mom got me a slowpoke")
@@ -9,7 +11,7 @@ script ProfLab_EventScript_Pokeball{
         removeobject(1)
         setflag(SET_CUSTOM_STARTER_0x020)
         setflag(FLAG_SYS_POKEMON_GET)
-        call(NicknamePartyMon)
+        call(NicknamePartyMonP)
     }
     elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
         playfanfare(MUS_OBTAIN_ITEM)
@@ -17,7 +19,7 @@ script ProfLab_EventScript_Pokeball{
         removeobject(1)
         setflag(SET_CUSTOM_STARTER_0x020)
         setflag(FLAG_SYS_POKEMON_GET)
-        call(NicknameBoxMon)
+        call(NicknameBoxMonP)
     }
     else{
         hidemonpic
@@ -32,7 +34,7 @@ script ProfLab_EventScript_Pokeball{
  
 }
  
-script NicknamePartyMon{
+script NicknamePartyMonP{
  
     msgbox("Give it a nickname?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
@@ -43,7 +45,7 @@ script NicknamePartyMon{
  
 }
  
-script NicknameBoxMon{
+script NicknameBoxMonP{
     msgbox("Give it a nickname?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
         call(Common_EventScript_NameReceivedBoxMon)

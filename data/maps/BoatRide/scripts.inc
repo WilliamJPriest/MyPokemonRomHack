@@ -67,8 +67,10 @@ PirateBattle::
 
 PirateBattle_1:
 	setflag SET_PIRATE_BATTLE_0x021
-	trainerBattle_single
-	return
+	trainerBattle_single TRAINER_GRUNT_DAVIS, pirate_intro, pirate_battle
+	msgbox pirate_lose, MSGBOX_AUTOCLOSE
+	waitmessage
+	end
 
 
 ProfLab_EventScript_Pokeball_Text_0:
@@ -88,3 +90,12 @@ ProfLab_EventScript_Pokeball_Text_4:
 
 NicknamePartyMon_Text_0:
 	.string "Give it a nickname?$"
+
+pirate_intro::
+	.string "Hey Kid$"
+
+pirate_battle::
+	.string "You'll never win$"
+
+pirate_lose::
+	.string "What!?$"
