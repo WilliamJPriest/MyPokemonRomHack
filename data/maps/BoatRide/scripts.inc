@@ -1,5 +1,5 @@
 BoatRide_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, BoatRide_EventScript_setupBattle
+	map_script MAP_SCRIPT_ON_RESUME, BoatRide_EventScript_setupBattle
 	.byte 0
 
 

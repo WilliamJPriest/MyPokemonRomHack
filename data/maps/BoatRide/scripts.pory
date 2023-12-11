@@ -1,5 +1,5 @@
 mapscripts BoatRide_MapScripts {
-    MAP_SCRIPT_ON_TRANSITION: BoatRide_EventScript_setupBattle
+    MAP_SCRIPT_ON_RESUME: BoatRide_EventScript_setupBattle
 
 }
 
@@ -59,6 +59,7 @@ script NicknameBoxMonP{
 script BoatRide_EventScript_setupBattle{
     if(!flag(SET_CUSTOM_STARTER_0x020)){
         setflag(SET_PIRATE_BATTLE_0x021)
+        call(BoatRide_EventScript_PirateBattle)
     }else{
         clearflag(SET_PIRATE_BATTLE_0x021)
     }
