@@ -28,7 +28,7 @@ script BoatRide_EventScript_Pokeball{
     msgbox("Where is she?")
     msgbox("I should thank her")
     waitmessage
-    call(PirateBattle)
+    call(setupBattle)
     releaseall
     end
  
@@ -53,19 +53,21 @@ script NicknameBoxMonP{
     call(Common_EventScript_TransferredToPC)
  
 }
-script PirateBattle{
-    if(!(flag(SET_CUSTOM_STARTER_0x020))){
+
+script setupBattle{
+    if(!flag(SET_CUSTOM_STARTER_0x020)){
         setflag(SET_PIRATE_BATTLE_0x021)
+    }else{
+        clearflag(SET_PIRATE_BATTLE_0x021)
+    }
+
+}
+script PirateBattle{
+        msgbox("hi")
         walk_up
         trainerBattle_single(TRAINER_GRUNT_DAVIS,pirate_intro,pirate_battle)
         msgbox(pirate_lose, MSGBOX_AUTOCLOSE)
         waitmessage
-        end
-
-    }else{
-        clearflag(SET_PIRATE_BATTLE_0x021)
-        
-    }
 }
 
 text pirate_intro{

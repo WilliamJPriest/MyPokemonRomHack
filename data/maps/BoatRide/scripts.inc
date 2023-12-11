@@ -65,16 +65,17 @@ NicknameBoxMonP_2:
 
 
 PirateBattle::
-	goto_if_set SET_CUSTOM_STARTER_0x020, PirateBattle_1
+	goto_if_unset SET_CUSTOM_STARTER_0x020, PirateBattle_1
 	clearflag SET_PIRATE_BATTLE_0x021
 	return
 
 PirateBattle_1:
 	setflag SET_PIRATE_BATTLE_0x021
+	walk_up
 	trainerBattle_single TRAINER_GRUNT_DAVIS, pirate_intro, pirate_battle
 	msgbox pirate_lose, MSGBOX_AUTOCLOSE
 	waitmessage
-	end
+	return
 
 
 BoatRide_EventScript_Pokeball_Text_0:
@@ -96,10 +97,10 @@ NicknamePartyMonP_Text_0:
 	.string "Give it a nickname?$"
 
 pirate_intro::
-	.string "Hey Kid$"
+	.string "Hey Kid!!$"
 
 pirate_battle::
-	.string "You'll never win$"
+	.string "Stay where you are!$"
 
 pirate_lose::
-	.string "What!?$"
+	.string "What the..!?$"
