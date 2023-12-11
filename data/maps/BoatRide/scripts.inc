@@ -1,4 +1,5 @@
 BoatRide_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, BoatRide_EventScript_setupBattle
 	.byte 0
 
 
@@ -16,7 +17,6 @@ BoatRide_EventScript_Pokeball_1:
 	msgbox BoatRide_EventScript_Pokeball_Text_3
 	msgbox BoatRide_EventScript_Pokeball_Text_4
 	waitmessage
-	call PirateBattle
 	releaseall
 	end
 
@@ -64,14 +64,17 @@ NicknameBoxMonP_2:
 	goto NicknameBoxMonP_1
 
 
-PirateBattle::
-	goto_if_unset SET_CUSTOM_STARTER_0x020, PirateBattle_1
+BoatRide_EventScript_setupBattle::
+	goto_if_unset SET_CUSTOM_STARTER_0x020, BoatRide_EventScript_setupBattle_1
 	clearflag SET_PIRATE_BATTLE_0x021
 	return
 
-PirateBattle_1:
+BoatRide_EventScript_setupBattle_1:
 	setflag SET_PIRATE_BATTLE_0x021
-	walk_up
+	return
+
+
+BoatRide_EventScript_PirateBattle::
 	trainerBattle_single TRAINER_GRUNT_DAVIS, pirate_intro, pirate_battle
 	msgbox pirate_lose, MSGBOX_AUTOCLOSE
 	waitmessage
@@ -97,7 +100,7 @@ NicknamePartyMonP_Text_0:
 	.string "Give it a nickname?$"
 
 pirate_intro::
-	.string "Hey Kid!!$"
+	.string "Hey Kiddo!!$"
 
 pirate_battle::
 	.string "Stay where you are!$"

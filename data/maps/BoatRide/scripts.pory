@@ -1,4 +1,7 @@
-mapscripts BoatRide_MapScripts {}
+mapscripts BoatRide_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: BoatRide_EventScript_setupBattle
+
+}
 
 script BoatRide_EventScript_Pokeball{
  
@@ -28,7 +31,6 @@ script BoatRide_EventScript_Pokeball{
     msgbox("Where is she?")
     msgbox("I should thank her")
     waitmessage
-    call(setupBattle)
     releaseall
     end
  
@@ -54,7 +56,7 @@ script NicknameBoxMonP{
  
 }
 
-script setupBattle{
+script BoatRide_EventScript_setupBattle{
     if(!flag(SET_CUSTOM_STARTER_0x020)){
         setflag(SET_PIRATE_BATTLE_0x021)
     }else{
@@ -62,16 +64,14 @@ script setupBattle{
     }
 
 }
-script PirateBattle{
-        msgbox("hi")
-        walk_up
+script BoatRide_EventScript_PirateBattle{
         trainerBattle_single(TRAINER_GRUNT_DAVIS,pirate_intro,pirate_battle)
         msgbox(pirate_lose, MSGBOX_AUTOCLOSE)
         waitmessage
 }
 
 text pirate_intro{
-    "Hey Kid!!"
+    "Hey Kiddo!!"
 }
 
 text pirate_battle{
