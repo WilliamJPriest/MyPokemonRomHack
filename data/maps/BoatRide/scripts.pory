@@ -54,8 +54,9 @@ script NicknameBoxMonP{
  
 }
 script PirateBattle{
-    if(!flag(SET_CUSTOM_STARTER_0x020)){
+    if(!(flag(SET_CUSTOM_STARTER_0x020))){
         setflag(SET_PIRATE_BATTLE_0x021)
+        walk_up
         trainerBattle_single(TRAINER_GRUNT_DAVIS,pirate_intro,pirate_battle)
         msgbox(pirate_lose, MSGBOX_AUTOCLOSE)
         waitmessage
@@ -68,13 +69,13 @@ script PirateBattle{
 }
 
 text pirate_intro{
-    "Hey Kid"
+    "Hey Kid!!"
 }
 
 text pirate_battle{
-    "You'll never win"
+    "Stay where you are!"
 }
 
 text pirate_lose{
-    "What!?"
+    "What the..!?"
 }

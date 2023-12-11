@@ -3503,17 +3503,6 @@ Route123_Text_FernandoPostRematch:
 	.string "I thought you'd be so enthralled\n"
 	.string "by my tune, you'd lose.$"
 
-Route123_Text_DavisIntro:
-	.string "This is my awesome BUG POKéMON!\n"
-	.string "My big brother got it for me.$"
-
-Route123_Text_DavisDefeat:
-	.string "Waaaah!\n"
-	.string "You meanie!$"
-
-Route123_Text_DavisPostBattle:
-	.string "Don't tell my brother I lost.\n"
-	.string "You have to keep it a secret!$"
 
 Route123_Text_JazmynIntro:
 	.string "My confidence will get a boost by\n"
