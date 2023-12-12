@@ -69,6 +69,7 @@ script BoatRide_EventScript_PirateBattle{
         trainerBattle_single(TRAINER_GRUNT_DAVIS,pirate_intro,pirate_battle)
         msgbox(pirate_lose, MSGBOX_AUTOCLOSE)
         waitmessage
+        // make him walk off screen and disappear
 }
 
 text pirate_intro{
@@ -76,9 +77,10 @@ text pirate_intro{
 }
 
 text pirate_battle{
-    "Stay where you are!"
+    "What the..!?"
 }
 
 text pirate_lose{
-    "What the..!?"
+     "What the..!?"
+    
 }
