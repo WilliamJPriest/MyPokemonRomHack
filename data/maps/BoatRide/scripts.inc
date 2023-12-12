@@ -71,6 +71,7 @@ BoatRide_EventScript_setupBattle::
 
 BoatRide_EventScript_setupBattle_1:
 	setflag SET_PIRATE_BATTLE_0x021
+	call BoatRide_EventScript_PirateBattle
 	return
 
 
@@ -103,7 +104,7 @@ pirate_intro::
 	.string "Hey Kiddo!!$"
 
 pirate_battle::
-	.string "Stay where you are!$"
+	.string "What the..!?$"
 
 pirate_lose::
 	.string "What the..!?$"
