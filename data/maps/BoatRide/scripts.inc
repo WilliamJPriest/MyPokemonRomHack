@@ -67,7 +67,6 @@ NicknameBoxMonP_2:
 BoatRide_EventScript_setupBattle::
 	goto_if_unset SET_CUSTOM_STARTER_0x020, BoatRide_EventScript_setupBattle_1
 	clearflag SET_PIRATE_BATTLE_0x021
-	call BoatRide_EventScript_PirateBattle
 	return
 
 BoatRide_EventScript_setupBattle_1:
@@ -79,16 +78,8 @@ BoatRide_EventScript_PirateBattle::
 	trainerBattle_single TRAINER_GRUNT_DAVIS, pirate_intro, pirate_battle
 	msgbox pirate_lose, MSGBOX_AUTOCLOSE
 	waitmessage
-	applymovement 2, PirateLeave
-	waitmovement 0
-	removeobject 2
 	return
 
-
-PirateLeave:
-	walk_down
-	walk_down
-	step_end
 
 BoatRide_EventScript_Pokeball_Text_0:
 	.string "My mom got me a slowpoke$"
