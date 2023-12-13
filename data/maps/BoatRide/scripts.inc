@@ -70,8 +70,10 @@ BoatRide_EventScript_setupBattle::
 	return
 
 BoatRide_EventScript_setupBattle_1:
+	lockall
 	setflag SET_PIRATE_BATTLE_0x021
 	call BoatRide_EventScript_PirateBattle
+	release
 	return
 
 
@@ -79,6 +81,9 @@ BoatRide_EventScript_PirateBattle::
 	trainerBattle_single TRAINER_GRUNT_DAVIS, pirate_intro, pirate_battle
 	msgbox pirate_lose, MSGBOX_AUTOCLOSE
 	waitmessage
+	applymovement 2, walk - down * 2
+	waitmovement 0
+	removeobject 2
 	return
 
 
