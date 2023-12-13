@@ -77,7 +77,7 @@ script BoatRide_EventScript_PirateBattle{
 }
 
 movement PirateLeave {
-    walk_down * 7
+    walk_down * 2
  
 }
 
