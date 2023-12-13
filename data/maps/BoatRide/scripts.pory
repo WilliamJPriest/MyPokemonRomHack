@@ -58,8 +58,10 @@ script NicknameBoxMonP{
 
 script BoatRide_EventScript_setupBattle{
     if(!flag(SET_CUSTOM_STARTER_0x020)){
+        lockall
         setflag(SET_PIRATE_BATTLE_0x021)
         call(BoatRide_EventScript_PirateBattle)
+        release
     }else{
         clearflag(SET_PIRATE_BATTLE_0x021)
     }
@@ -69,7 +71,9 @@ script BoatRide_EventScript_PirateBattle{
         trainerBattle_single(TRAINER_GRUNT_DAVIS,pirate_intro,pirate_battle)
         msgbox(pirate_lose, MSGBOX_AUTOCLOSE)
         waitmessage
-        // make him walk off screen and disappear
+        applymovement(2, walk-down*2)
+        waitmovement(0)
+        removeobject(2)
 }
 
 text pirate_intro{
