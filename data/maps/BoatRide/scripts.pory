@@ -71,15 +71,15 @@ script BoatRide_EventScript_PirateBattle{
         trainerBattle_single(TRAINER_GRUNT_DAVIS,pirate_intro,pirate_battle)
         msgbox(pirate_lose, MSGBOX_AUTOCLOSE)
         waitmessage
-        applymovement(2,  PirateLeave)
+        // applymovement(2,  PirateLeave)
         waitmovement(0)
         removeobject(2)
 }
 
-movement PirateLeave {
-    walk_down * 2
+// movement PirateLeave {
+//     walk_down * 2
  
-}
+// }
 
 text pirate_intro{
     "Hey Kiddo!!"
